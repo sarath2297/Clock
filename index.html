@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw552c9d4b/images/Titan/Catalog/W0075PS01_1.jpg?sw=800&sh=800">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <h1 id="clock"></h1>
+    </div>
+</body>
+<script>
+    function getTime()
+    {
+        const time = new Date()
+        console.log(time);
+        let hour = time.getHours()
+        console.log(hour)
+        let min = time.getMinutes()
+        console.log(min)
+        let sec = time.getSeconds()
+        console.log(sec)
+    
+        clock.innerHTML = `${hour} : ${min} : ${sec}  ${hour>=12?'PM':'AM'}`
+
+        setTimeout(()=>{ getTime() },1000)
+    }
+
+    getTime()
+
+    
+</script>
+</html>     
